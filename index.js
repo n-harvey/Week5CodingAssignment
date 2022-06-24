@@ -56,10 +56,6 @@ class Menu{
     }
 
     removeGame(){
-        let gameList = ''
-        for(let i = 0; i < this.gameLibrary.length; i++){
-            gameList += `${i}) ${this.gameLibrary[i].name} \n`
-        }
         let index = prompt(`Enter index of game to remove: \n ${this.getGameList()}`)
         if (index > -1 && index < this.gameLibrary.length){
             this.gameLibrary.splice(index,1)
