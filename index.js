@@ -32,7 +32,7 @@ class Menu{
 
     showMainMenuOptions(){
         return prompt(`
-        Welcome to Game Storage
+        Welcome to Game Library
         ----------------------
         1) Add New Game
         2) Delete Game
