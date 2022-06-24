@@ -4,12 +4,6 @@ class Game{
     }
 }
 
-class GameLibrary{
-    constructor(){
-        this.games = []
-    }
-}
-
 class Menu{
     constructor(){
         this.gameLibrary = []
@@ -38,7 +32,7 @@ class Menu{
 
     showMainMenuOptions(){
         return prompt(`
-        Welcome to Game Library
+        Welcome to Game Storage
         ----------------------
         1) Add New Game
         2) Delete Game
