@@ -42,6 +42,14 @@ class Menu{
 
     }
 
+    getGameList(){
+        let gameList = ''
+        for(let i = 0; i < this.gameLibrary.length; i++){
+            gameList += `${i}) ${this.gameLibrary[i].name} \n`
+        }
+        return gameList
+    }
+
     addGame(){
         let game = prompt(`Enter name of game:`)
         this.gameLibrary.push(new Game(game))
@@ -52,19 +60,14 @@ class Menu{
         for(let i = 0; i < this.gameLibrary.length; i++){
             gameList += `${i}) ${this.gameLibrary[i].name} \n`
         }
-        let index = prompt(`Enter index of game to remove: \n ${gameList}`)
+        let index = prompt(`Enter index of game to remove: \n ${this.getGameList()}`)
         if (index > -1 && index < this.gameLibrary.length){
             this.gameLibrary.splice(index,1)
         }
     }
 
     viewGames(){
-        let gameList = ''
-        for(let i = 0; i < this.gameLibrary.length; i++){
-            gameList += `${i}) ${this.gameLibrary[i].name} \n`
-        }
-        alert(gameList)
-
+        alert(this.getGameList())
     }
 }
 
